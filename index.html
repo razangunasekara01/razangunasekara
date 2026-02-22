@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Razan Gunasekara Salon</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        /* Collage container */
+        .background-collage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            grid-template-rows: repeat(2, 50%);   /* 2 rows */
+            gap: 5px;
+            z-index: -1;
+        }
+
+        .background-collage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Card */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            text-align: center;
+            width: 90%;
+            max-width: 420px;
+            z-index: 1;
+        }
+
+        /* Title Section */
+        .title-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .title-box img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .title-box h2 {
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            margin: 12px;
+            border-radius: 50%;
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            transition: 0.4s;
+        }
+
+        /* Colors */
+        .facebook { background: #1877f2; }
+        .instagram { background: #e4405f; }
+        .tiktok { background: #000000; }
+        .whatsapp { background: #25d366; }
+        .location { background: #ff5722; }
+
+        .icons a:hover {
+            transform: scale(1.2) rotate(8deg);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        /* Responsive text */
+        @media (max-width: 500px) {
+            .title-box h2 {
+                font-size: 16px;
+            }
+            .title-box img {
+                width: 60px;
+                height: 60px;
+            }
+            .icons a {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            .background-collage {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on small screen */
+                grid-template-rows: repeat(4, 25%);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Collage background -->
+    <div class="background-collage">
+        <img src="bg1.jpeg" alt="">
+        <img src="bg2.jpeg" alt="">
+        <img src="bg3.jpeg" alt="">
+        <img src="bg4.jpeg" alt="">
+        <img src="bg5.jpeg" alt="">
+        <img src="bg6.jpeg" alt="">
+    </div>
+
+    <!-- Front Card -->
+    <div class="card">
+
+        <!-- Salon Title + Logo -->
+        <div class="title-box">
+            <img src="logo.png" alt="Salon Logo">
+            <h2>RAZAN GUNASEKARA SALON AND ACADEMY</h2>
+        </div>
+
+        <h1>Follow Us</h1>
+
+        <div class="icons">
+
+            <a href="https://www.facebook.com/share/1A1a9cMchg/?mibextid=wwXIfr" target="_blank" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/razans_salon?igsh=anEwZm9vN3JlcmNh&utm_source=qr" target="_blank" class="instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@razans_salon?_t=ZS-8zQNwnkTbhh&_r=1" target="_blank" class="tiktok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="https://wa.me/94763445378" target="_blank" class="whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://maps.app.goo.gl/jXvUGFMVNHyQ645L9?g_st=ic" target="_blank" class="location">
+                <i class="fas fa-location-dot"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
